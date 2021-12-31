@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#3299cc"
+        >
+        <!-- 图片显示区域  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:orientation="horizontal"
+            android:layout_gravity="top"
+            android:background="#87ceeb"
+            >
+            <!-- 正面照区域  -->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="350dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <!-- 正面照显示  -->
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/front_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@mipmap/add1" />
+                <!-- 提示语  -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:background="#ffffff"
+                    android:text="正面照"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+            <!--  分割线  -->
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="350dp"
+                android:background="#000000"/>
+            <!-- 侧面照区域  -->
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="350dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <!-- 侧面照显示  -->
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/side_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@mipmap/add1" />
+            <!-- 提示语  -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="#ffffff"
+                android:text="侧面照"
+                android:textColor="#000"
+                android:gravity="center"
+                android:textSize="20dp"
+                />
+           </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 结论显示区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center">
+            <!-- 结论显示板  -->
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#38b0de"
+                android:scrollbars="vertical"
+                android:padding="10.0dip"
+                android:textSize="22.0sp" >
+            </TextView>
+
+        </LinearLayout>
+
+        <!-- 按键区域  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
+            <!-- 分析按键  -->
+            <Button
+                android:id="@+id/button_analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="分析图片"
+                android:background="#3299cc"
+                android:textSize="15dp"/>
+            <!-- 显示骨架按键  -->
+            <Button
+                android:id="@+id/button_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="显示骨架"
+                android:background="#3299cc"
+                android:textSize="15dp"/>
+            <!-- 保存当前图片按键  -->
+            <Button
+                android:id="@+id/button_take"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存图片"
+                android:layout_weight="1"
+                android:background="#3299cc"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
